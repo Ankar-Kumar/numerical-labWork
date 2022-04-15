@@ -2,10 +2,20 @@ class bisection{
 	static double epsilon=0.0000001;
 	static double f(double x)
 	{
-		return x*x*x+x*x-1;
+		return x*x*x-2*x*x-5;
 	}
 	bisection(double a,double b)
 	{
+		int i=1;
+		b=i;
+		while(f(a)*f(b)>0){
+			a=b;
+			i++;
+			b=i;
+
+		}
+		// System.out.println(a);
+		// System.out.println(b);
 		double r=a;
 		while((b-a)>=epsilon)
 		{

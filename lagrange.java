@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class lagrange {
 	
 	lagrange(int n,float a,float[] x,float[]f) {
-
 	    int i,j;
 		float sum=0;
 	   for(i=0;i<n;i++)
@@ -14,8 +13,7 @@ public class lagrange {
                 {
                     if(i!=j)
                     {
-                         temp *= (a - x[j])/(x[i] - x[j]);
-                         
+                         temp *= (a - x[j])/(x[i] - x[j]);                         
                     }
                 }
                 sum+= temp * f[i];

@@ -1,16 +1,35 @@
 import java.lang.Math;
 class falsi{
 	private int iteration=100000;
+    private double a,b;
 static double f(double a)
 {
-    return a*a*a - a*a + 2;
+    return a*a*a - 5*a -5;
 }
-falsi(double a,double b)
+ 
+
+falsi(double a,double b){
+    this.a=a;
+    this.b=b;
+    int i=1;
+    b=i;
+    while(f(a)*f(b)>0){
+        a=b;
+        i++;
+        b=i;
+
+    }
+    // System.out.println(a);
+    // System.out.println(b);
+    double root=falsi(a,b);
+    System.out.println(root);
+}
+private double falsi(double a,double b)
 {
     double r=a;
-    for(int i=0; i<iteration; i++)
+    for(int i=0;i<10;i++)
     {
-        r=(a*f(b)-b*f(a))/(f(b)-f(a));
+        r=b-((b-a)*f(b)/(f(b)-f(a)));
         if(f(r)==0)
             break;
         else if(f(r)*f(a)<0)
@@ -18,7 +37,7 @@ falsi(double a,double b)
         else
             a=r;
     }
-    System.out.println(r);
+    return r;
 }
 	// public static void main(String[] args)
 	// {

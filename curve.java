@@ -1,5 +1,7 @@
 import java.util.Scanner;
 class curve{
+
+  
   curve(int n,float[] x,float[] y){
   int i,j;
     float sumy=0, sumx=0, sumxy=0, sumxx=0;
